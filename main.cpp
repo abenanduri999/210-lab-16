@@ -16,10 +16,10 @@ class Color {
         //default constructor
         Color() { Red = 1; Green = 1; Blue = 1; }
 
-        // constructor 
-        Color (int r , int g) { Red = r; Green = g; Blue = 5; }
-        Color (int r) { Red = r; Green = 6; Blue = 7; }
-        Color( int r, int g, int b) { Red  = r; Green = g; Blue = b; }
+        // constructors 
+        Color (int r , int g) { Red = r; Green = g; Blue = 5; } // partial constuct
+        Color (int r) { Red = r; Green = 6; Blue = 7; } // parital con
+        Color( int r, int g, int b) { Red  = r; Green = g; Blue = b; } // parameter constructor
         // getters and setters, functions accessbile by main function
         void setRed(int r) { Red = r; }
         void setGreen(int g) { Green = g; }
@@ -42,9 +42,10 @@ class Color {
 int main() {
  
 
-    Color c1 (32, 130, 250); 
-    Color c2 (46, 83); 
-    Color c3 (); 
+    Color c1 (32, 130, 250); // parameter constructor
+    Color c2 (46, 83);       // partial    "
+    Color c3 (58);           // partial    "  
+    Color c4;                // default    "
 
    
     cout<<setw(10)<<left<<"RED"<<setw(10)<<left<<
@@ -53,5 +54,9 @@ int main() {
     c1.print();
     c2.print();
     c3.print();
+    c4.print(); 
+   
 
-    return 0;    
+    return 0; 
+
+}
